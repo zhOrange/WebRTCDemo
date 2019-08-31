@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>WebRTC Video Conference Tutorial - Plain WebRTC</title>
+</head>
+<body>
+    <h1>WebRTC Video Conference Tutorial - Plain WebRTC</h1>
+
+    <div id="selectRoom">
+        <label>Type the room number</label>
+        <input id="roomNumber" type="text" />
+        <button id="goRoom">Go</button>
+    </div>
+
+    <div id="consultingRoom" style="display:none">
+        <video id="localVideo" autoplay></video>
+        <video id="remoteVideo" autoplay></video>
+        <br/>
+        <!--dataChannel-->
+        <textarea id="dataChannelSend" placeholder="点击开始按钮，然后输入一段文字，点击发送"></textarea>
+        <input type="file" id ="fileSend"/>
+        <button id = "sendBtn">发送</button>
+        <br/>
+        <br/>
+        <textarea id = "dataChannelReceive" ></textarea>
+        <br/>
+        <img src="" id ="recvImg"/>
+        
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
